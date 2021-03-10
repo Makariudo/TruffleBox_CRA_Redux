@@ -29,18 +29,18 @@
       "constant": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/work_store/blockchain_work/truffleBox_React_Redux/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/work_store/blockchain_work/truffleBox_React_Redux/contracts/SimpleStorage.sol\":{\"keccak256\":\"0xeec718dba38950a59b688ca9f52def289e968ec77aea3294a651470c6a6f671e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d370bfb330e7bc1e96d9ed1ecb37e8781e91f8fa7e8139c0f444ce8ff70f11d7\",\"dweb:/ipfs/QmWmNzHoA8m71YAur3GqUJoJi9KVh1sjv176E4qKQa713v\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060c78061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea26469706673582212201bd8a065cce807cf0d81adf2773ceed8a097e214506e34fd68c32068ba8e04a364736f6c63430007060033",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea26469706673582212201bd8a065cce807cf0d81adf2773ceed8a097e214506e34fd68c32068ba8e04a364736f6c63430007060033",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/C/work_store/blockchain_work/truffleBox_V1/trufflebox-cra-redux/contracts/SimpleStorage.sol\":\"SimpleStorage\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/work_store/blockchain_work/truffleBox_V1/trufflebox-cra-redux/contracts/SimpleStorage.sol\":{\"keccak256\":\"0xeec718dba38950a59b688ca9f52def289e968ec77aea3294a651470c6a6f671e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d370bfb330e7bc1e96d9ed1ecb37e8781e91f8fa7e8139c0f444ce8ff70f11d7\",\"dweb:/ipfs/QmWmNzHoA8m71YAur3GqUJoJi9KVh1sjv176E4qKQa713v\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060c78061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea2646970667358221220c9f681c86420b035c4176f39c0c5a9bb70c58b4149fa7cc07c4af9e1fe492ab664736f6c63430007060033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806360fe47b11460375780636d4ce63c146062575b600080fd5b606060048036036020811015604b57600080fd5b8101908080359060200190929190505050607e565b005b60686088565b6040518082815260200191505060405180910390f35b8060008190555050565b6000805490509056fea2646970667358221220c9f681c86420b035c4176f39c0c5a9bb70c58b4149fa7cc07c4af9e1fe492ab664736f6c63430007060033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [],
   "sourceMap": "60:186:1:-:0;;;;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "60:186:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;110:55;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;171:72;;;:::i;:::-;;;;;;;;;;;;;;;;;;;110:55;158:1;145:10;:14;;;;110:55;:::o;171:72::-;207:4;227:10;;220:17;;171:72;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.7.4;\r\n\r\ncontract SimpleStorage {\r\n  uint storedData;\r\n\r\n  function set(uint x) public {\r\n    storedData = x;\r\n  }\r\n\r\n  function get() public view returns (uint) {\r\n    return storedData;\r\n  }\r\n}\r\n",
-  "sourcePath": "C:/work_store/blockchain_work/truffleBox_React_Redux/contracts/SimpleStorage.sol",
+  "sourcePath": "C:/work_store/blockchain_work/truffleBox_V1/trufflebox-cra-redux/contracts/SimpleStorage.sol",
   "ast": {
-    "absolutePath": "/C/work_store/blockchain_work/truffleBox_React_Redux/contracts/SimpleStorage.sol",
+    "absolutePath": "/C/work_store/blockchain_work/truffleBox_V1/trufflebox-cra-redux/contracts/SimpleStorage.sol",
     "exportedSymbols": {
       "SimpleStorage": [
         55
@@ -290,7 +290,7 @@
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "/C/work_store/blockchain_work/truffleBox_React_Redux/contracts/SimpleStorage.sol",
+      "absolutePath": "/C/work_store/blockchain_work/truffleBox_V1/trufflebox-cra-redux/contracts/SimpleStorage.sol",
       "exportedSymbols": {
         "SimpleStorage": [
           55
@@ -589,8 +589,8 @@
     "42": {
       "events": {},
       "links": {},
-      "address": "0xd4240d76C65F8b180f7Be5B694dB5957aD7e9347",
-      "transactionHash": "0x994b981a6bf6d794b7a8a91d8ee9c81994ed6a636d3ba0d54aa92694b89c9654"
+      "address": "0x3805500B8301DaE031063e9FEeD098D1fAAA6E8a",
+      "transactionHash": "0x31210cffe4da32a31b336c67ef90caef19abb5c92a87ff031bd974f0bf02ba74"
     },
     "1337": {
       "events": {},
@@ -600,7 +600,7 @@
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-03-09T14:18:08.918Z",
+  "updatedAt": "2021-03-10T12:28:37.638Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
