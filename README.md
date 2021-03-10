@@ -1,3 +1,29 @@
+# Welcome to TruffleReactRedux boilerPlate!
+
+Versions :
+
+**Truffle** v5.2.2 (core: 5.2.2)
+**Solidity** ^0.7.4(solc-js)
+**Node** V14.16.0
+**Web3.js** v1.2.9
+
+## STEP 1
+--npm install--
+-Put your mmnemonic phrase and infura infos in your .env
+
+-Config your truffle-config
+
+-Write your contracts in /contracts
+
+-Write your test with mocha and chai in /Test
+
+
+>Do your stuff
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
