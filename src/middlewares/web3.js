@@ -1,13 +1,14 @@
-import { NEW_INSTANCE } from '../actions/types';
-import { seedInstance } from '../actions/contract';
+import { NEW_INSTANCE, SUBMIT_VALUE } from '../actions/types';
+import { seedInstance, seedValueReceipt } from '../actions/contract';
 import getWeb3 from "../utils/getWeb3";
 import SimpleStorageContract from "../contracts/SimpleStorage.json";
 
 const web3 = ({getState, dispatch}) => (next) => async (action) => {
-  const store = getState();
   const result = next(action);
+  const store = getState();
 
   switch (action.type) {
+     /* CREATE NEW INSTANCE*/
     case NEW_INSTANCE :
     try { // Get network provider and web3 instance.
       const web3 = await getWeb3();
@@ -41,7 +42,28 @@ const web3 = ({getState, dispatch}) => (next) => async (action) => {
       );
       console.error(error);
     }
-  break;
+    break;
+
+  /* SUBMIT NEW VALUE*/
+  case SUBMIT_VALUE :
+      try {        
+        const {contract, inputValue, accounts} = store.contract;
+        console.log("passe par submit value", inputValue);
+        console.log('instance:', contract);
+        const res = await contract.methods.set(inputValue).send({from: accounts[0]});
+        if(res.status){
+          dispatch(seedValueReceipt(inputValue));
+        }  
+      } catch (error){
+        // Catch any errors for any of the above operations.
+        alert(
+          `Failed to load web3, accounts, or contract. Check console for details.`,
+        );
+        console.error(error);
+      }
+    break;
+  default: 
+    return result;
   }
   return result;
   };

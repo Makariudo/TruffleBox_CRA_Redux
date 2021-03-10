@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import "./App.css";
 
-const App = ({web3, accounts, contract, storageValue, isLoading, newInstance}) => {
+const App = ({web3, accounts, contract, storageValue, isLoading, newInstance, inputValue, changeField, submitValue}) => {
  
   useEffect(() => {
     console.log('New Instance...');
@@ -10,6 +10,9 @@ const App = ({web3, accounts, contract, storageValue, isLoading, newInstance}) =
       newInstance();
     }
 }, [])
+
+const handleChange = event => changeField(event.target.value, event.target.name);
+const handleSubmit = event => submitValue();
 
     return (
       <div className="App">
@@ -20,9 +23,9 @@ const App = ({web3, accounts, contract, storageValue, isLoading, newInstance}) =
           Your contracts compiled and migrated successfully
         </p>
         <p>
-          Try changing the value stored on your smart contract : <input type="number"></input> 
+          Try changing the value stored on your smart contract : <input type="number" name="inputValue" value={inputValue} onChange={handleChange}></input> <button type="button" onClick={handleSubmit} >Submit</button>
         </p>
-        <div>The stored value is: {storageValue}</div>
+        <div>The stored value is: {isLoading ? "data is loading..." : storageValue}</div>
       </div>
     );
   }

@@ -1,11 +1,13 @@
-import { NEW_INSTANCE, SEED_INSTANCE } from '../actions/types';
+import { NEW_INSTANCE, SEED_INSTANCE, CHANGE_FIELD, SUBMIT_VALUE, SEED_VALUE_RECEIPT } from '../actions/types';
 
 export const initialState = {
   web3: null,
   accounts: null,
   contract: null,
   storageValue: 0,
-  isLoading: false
+  inputValue: 0,
+  isLoading: false,
+
 };
 
 // reducer qui va gérer les recettes
@@ -24,8 +26,24 @@ const reducer = (oldState = initialState, action = {}) => {
         accounts: action.accounts,
         contract: action.instance,
         storageValue: action.storageValue,
+        inputValue: action.storageValue,
       };
-  
+    case CHANGE_FIELD:
+      return {
+        ...oldState,
+        ...action.payload,
+      };
+    case SUBMIT_VALUE:
+      return {
+        ...oldState,
+        isLoading: true,
+      };
+    case SEED_VALUE_RECEIPT:
+      return {
+        ...oldState,
+        isLoading: false,
+        storageValue: action.payload,
+      };
     default:
       return { ...oldState };
   }
