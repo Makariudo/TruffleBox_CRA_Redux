@@ -20,7 +20,7 @@ const handleSubmit = event => submitValue();
         <p>Your Truffle Box is installed and ready.</p>
         <h2>Smart Contract Example</h2>
         <p>
-          Your contracts compiled and migrated successfully
+          {contract ? "Your contracts compiled and migrated successfully" : "Try to deploy your contract !" }
         </p>
         <p>
           Try changing the value stored on your smart contract : <input type="number" name="inputValue" value={inputValue} onChange={handleChange}></input> <button type="button" onClick={handleSubmit} >Submit</button>

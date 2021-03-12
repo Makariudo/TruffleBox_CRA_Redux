@@ -8,20 +8,27 @@ Versions :
 **Web3.js** v1.2.9
 
 ## STEP 1
---npm install--
--Put your mmnemonic phrase and infura infos in your .env
 
--Config your truffle-config
+### npm install
 
--Write your contracts in /contracts
+### Put your mmnemonic phrase and infura infos in your .env
 
--Write your test with mocha and chai in /Test
+### Config your truffle-config as you wish
 
+### Write your contracts in /contracts and run `truffle compile`
+
+### Write your test with mocha and chai in /Test 
+
+### Deploy your contracts `truffle migrate --network 'your network' (--reset if you've already deployed your contract`
+
+
+## STEP2
+
+### run `npm run start`
+
+### Change / Make your Dapp
 
 >Do your stuff
-
-
-
 
 
 # Getting Started with Create React App
