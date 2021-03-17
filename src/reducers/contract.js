@@ -7,7 +7,6 @@ export const initialState = {
   storageValue: 0,
   inputValue: 0,
   isLoading: false,
-
 };
 
 // reducer qui va gérer les recettes

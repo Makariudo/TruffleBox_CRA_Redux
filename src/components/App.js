@@ -3,13 +3,13 @@ import React, { useEffect } from "react";
 import "./App.css";
 
 const App = ({web3, accounts, contract, storageValue, isLoading, newInstance, inputValue, changeField, submitValue}) => {
- 
+
   useEffect(() => {
     console.log('New Instance...');
     if(!contract){
       newInstance();
     }
-}, [])
+}, [contract, newInstance])
 
 const handleChange = event => changeField(event.target.value, event.target.name);
 const handleSubmit = event => submitValue();
