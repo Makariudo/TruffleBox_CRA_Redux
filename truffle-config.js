@@ -14,7 +14,7 @@ module.exports = {
     develop: {
       host: "127.0.0.1",
       port: 8545,
-      network_id: "1337"
+      network_id: "1337",
     }, 
     mainnet: {
       provider: () => new HDWalletProvider(mnemonic, endpoint('mainnet')),
@@ -55,5 +55,8 @@ module.exports = {
         runs: 200
       }
     }
-  }
+  }, 
+  ens: {
+    enabled: false
+  },
 };

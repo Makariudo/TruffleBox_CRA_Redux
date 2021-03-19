@@ -1,18 +1,20 @@
 import React, { useEffect, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux"; 
+import {NEW_INSTANCE} from "../actions/types";
 import {newInstance, changeField,submitValue} from "../actions/contract";
 import  contract  from "../reducers/contract";
 import "./App.css";
 
 const App = () => {
-const inputValue = useSelector(store => {
-  console.log("store", store)
-  return store.contract.inputValue}
+const dispatch = useDispatch();
+const store = useSelector(store => {
+  return store.contract}
   );
-const storageValue = useSelector(contract => contract.storageValue);
-console.log("inputvalue", inputValue)
-/* const fetchContract = useCallback(()=> {
-  newInstance()
+
+const { contract, storageValue, inputValue, isLoading } = store;
+
+const fetchContract = useCallback(()=> {
+  dispatch(newInstance())
 },[newInstance])
   
 useEffect(() => {
@@ -22,8 +24,8 @@ useEffect(() => {
     }
 }, [contract, fetchContract])
 
-const handleChange = event => changeField(event.target.value, event.target.name);
-const handleSubmit = event => submitValue(); */
+const handleChange = event => dispatch(changeField(event.target.value, event.target.name));
+const handleSubmit = event => dispatch(submitValue()); 
 
     return (
       <div className="App">
@@ -31,13 +33,12 @@ const handleSubmit = event => submitValue(); */
         <p>Your Truffle Box is installed and ready.</p>
         <h2>Smart Contract Example</h2>
         <p>
-          {/*contract ? "Your contracts compiled and migrated successfully" : "Try to deploy your contract !"*/ }
+          {contract ? "Your contracts compiled and migrated successfully" : "Try to deploy your contract !"}
         </p>
         <p>
-          Try changing the value stored on your smart contract : <input type="number" name="inputValue" value={inputValue}></input> <button type="button">Submit</button>
+          Try changing the value stored on your smart contract : <input type="number" name="inputValue" value={inputValue} onChange={handleChange}></input> <button type="button" onClick={handleSubmit}>Submit</button>
         </p>
-        <div>The stored value is: {/*isLoading ? "data is loading..." : storageValue*/}</div>
-        <p>storage value : {storageValue}</p>
+        <div>The stored value is: {isLoading ? "data is loading..." : storageValue}</div>
       </div>
     );
   }

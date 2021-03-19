@@ -1,11 +1,11 @@
 import { NEW_INSTANCE, SEED_INSTANCE, CHANGE_FIELD, SUBMIT_VALUE, SEED_VALUE_RECEIPT } from '../actions/types';
 
 export const initialState = {
-  web3: {},
-  accounts: [],
-  contract: {},
+  web3: null,
+  accounts: null,
+  contract: null,
   storageValue: 0,
-  inputValue: 3,
+  inputValue: 0,
   isLoading: false,
 };
 
