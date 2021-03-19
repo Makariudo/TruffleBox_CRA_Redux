@@ -10,11 +10,12 @@ import reportWebVitals from './reportWebVitals';
 import store from './store';
 // Composants
 import App from './containers/App';
+import App2 from './components/AppHooks';
 
 const rootReactElement = (
   <BrowserRouter>
     <Provider store={store}>
-      <App />
+      <App2 />
     </Provider>
   </BrowserRouter>
 );
