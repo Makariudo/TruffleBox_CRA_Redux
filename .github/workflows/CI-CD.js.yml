@@ -12,11 +12,11 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [15.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -29,9 +29,16 @@ jobs:
     - name: Install dependencies
       run: npm install
       
-    - name: Run the tests and generate coverage
-      run: truffle test --coverage
+    - name: Install truffle
+      run: npm install --save-dev truffle
+      
+    - name: Run the tests
+      run: npx truffle test
+    
+    - name: test and gene coverage
+      run: npx truffle test --coverage 
       
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
+      
     
