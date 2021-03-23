@@ -29,7 +29,7 @@ jobs:
     - name: Install dependencies
       run: npm install
       
-    - name: Run the tests and generate coverage
+    - name: Run the tests and gen coverage
       run: npx truffle test --coverage
       
     - name: Upload coverage to Codecov
