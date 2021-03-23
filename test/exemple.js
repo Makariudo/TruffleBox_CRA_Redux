@@ -1,7 +1,12 @@
-const { assert } = require("chai");
 const truffleAssert = require('truffle-assertions');
+const {
+  BN,           // Big Number support
+  constants,    // Common constants, like the zero address and largest integers
+  expectEvent,  // Assertions for emitted events
+  expectRevert, // Assertions for transactions that should fail
+} = require('@openzeppelin/test-helpers');
 
-const should = require("chai").should();
+
 const Storage = artifacts.require("SimpleStorage");
 
 
@@ -15,7 +20,7 @@ contract("SimpleStorage", accounts => {
   });
 
   it("should deploy", async () => {
-    should.exist(StorageInstance.address)
+    assert(StorageInstance.address)
   });
 
   context("set/get value", () => {
