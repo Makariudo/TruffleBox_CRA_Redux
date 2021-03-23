@@ -34,5 +34,11 @@ jobs:
       
     - name: Run the tests
       run: npx truffle test
+    
+    - name: test and gene coverage
+      run: npx truffle test --coverage 
+      
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
       
     
