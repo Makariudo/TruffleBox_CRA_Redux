@@ -30,7 +30,7 @@ jobs:
       run: npm install
       
     - name: Run the tests and gen coverage
-      run: npx truffle test --coverage
+      run: npx truffle test -- --coverage
       
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
