@@ -29,6 +29,9 @@ jobs:
     - name: Install dependencies
       run: npm install
       
+    - name: Install truffle
+      run: npm install --save-dev truffle
+      
     - name: Run the tests and gen coverage
       run: npx truffle test -- --coverage
       
