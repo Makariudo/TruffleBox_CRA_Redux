@@ -33,4 +33,5 @@ jobs:
       run: truffle test -- --coverage
       
     - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
       uses: codecov/codecov-actions@v1
