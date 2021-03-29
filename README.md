@@ -1,5 +1,7 @@
 # Welcome to TruffleReactRedux boilerPlate!
 
+<img src="./banniere.png" alt="react-redux box image" title="react-redux_logo" width="300" />
+
 Versions :
 
 **Truffle** v5.2.2 (core: 5.2.2)
@@ -9,7 +11,9 @@ Versions :
 
 ## STEP 1
 
+```
 ### npm install
+```
 
 ### Put your mmnemonic phrase and infura infos in your .env
 
